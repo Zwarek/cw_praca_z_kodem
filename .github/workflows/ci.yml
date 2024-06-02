@@ -27,7 +27,4 @@ jobs:
 
     - name: Uruchom testy
       run: |
-        # Tutaj możesz dodać polecenia do uruchomienia testów
-        # Na przykład, jeśli masz testy pytest, możesz uruchomić:
-        # pytest
-        echo "Testy są uruchamiane"
+        pytest
