@@ -1,5 +1,5 @@
 # Użyj oficjalnego obrazu Pythona jako bazowego
-FROM python:3.9
+FROM python:3.10
 
 # Ustaw katalog roboczy
 WORKDIR /app
