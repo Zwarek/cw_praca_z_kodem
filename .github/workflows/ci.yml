@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Sprawdź kod
+      uses: actions/checkout@v3
+
+    - name: Skonfiguruj Pythona
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Zainstaluj zależności
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Uruchom testy
+      run: |
+        # Tutaj możesz dodać polecenia do uruchomienia testów
+        # Na przykład, jeśli masz testy pytest, możesz uruchomić:
+        # pytest
+        echo "Testy są uruchamiane"
